@@ -1,0 +1,79 @@
+
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+
+
+/* Conteúdo principal */
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+/* Título de login */
+.content h2 {
+  font-size: 1.8em;
+  color: #D32F2F;
+  margin-bottom: 20px;
+}
+
+/* Estilo do formulário */
+form {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+input {
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+/* Botão de envio */
+button {
+  padding: 10px;
+  background-color: #D32F2F;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 10vw;
+}
+}
+
+button:hover {
+  background-color: #C62828;
+}
+#botao{
+  display: flex;
+  justify-content: center;
+}
+input.invalid {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 14px;
+}

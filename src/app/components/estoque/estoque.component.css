@@ -1,0 +1,119 @@
+
+  .layout {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #f5f5f5;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Layout em duas colunas para o formulário e a lista de estoque */
+  .estoque-layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .adicionar-estoque,
+  .lista-estoque {
+    flex: 1;
+  }
+  
+  /* Estilos para o formulário */
+  .adicionar-estoque form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .adicionar-estoque label,
+  .adicionar-estoque input,
+  .adicionar-estoque button {
+    margin-bottom: 10px;
+  }
+  
+  .adicionar-estoque button {
+    padding: 8px;
+    background-color: #b22222; /* Vermelho agradável */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .adicionar-estoque button:hover {
+    background-color: #8b0000; /* Escurece ao passar o mouse */
+  }
+  
+  /* Estilos para a lista de produtos */
+  .lista-estoque ul {
+    list-style-type: none;
+    padding: 0;
+    
+  }
+  
+  .lista-estoque li {
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .lista-estoque{
+    position: relative;
+    bottom: 167px;
+    background-color: #ececec;
+
+     ;
+  }
+  .layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  /* Barra lateral */
+  .sidebar {
+    width: 220px;
+    background-color: #212529; /* Vermelho agradável */
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar nav ul li {
+    margin: 20px 0;
+    background-color: #3D4145;
+  }
+  
+  .sidebar nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+  }
+  
+  
+  .sidebar nav ul li:hover {
+    background-color: #000000; /* Rosa claro para hover */
+  }
+  

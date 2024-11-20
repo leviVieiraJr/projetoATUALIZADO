@@ -1,0 +1,48 @@
+/* src/app/components/clientes/clientes.component.css */
+.clientes-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cadastro-cliente, .lista-clientes {
+    width: 48%;
+  }
+  .lista-clientes{
+    position: relative;
+    bottom: 10px;
+  }
+  .cadastro-cliente{
+    position: relative;
+    top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+  input, button {
+    display: block;
+    margin: 8px 0;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  
+  button {
+    background-color: #D32F2F;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #C62828;
+  }
+  h2{
+    color: black;
+  }
+  h3{
+    color: black;
+  }
+  

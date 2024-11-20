@@ -1,0 +1,50 @@
+<div class="layout">
+  <aside class="sidebar">
+    <img src="../../../assets/WhatsApp_Image_2024-03-08_at_16.15.20-removebg-preview.png" alt="Logo" width="200px">
+    <nav>
+      <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/financas">Finanças</a></li>
+        <li><a routerLink="/estoque">Estoque</a></li>
+        <li><a routerLink="/clientes">Clientes</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <h2>Estoque</h2>
+
+    <div class="adicionar-produto">
+      <h3>Adicionar Novo Produto</h3>
+      <form (ngSubmit)="onSubmit()" [formGroup]="estoqueForm">
+        <label for="nome">Nome:</label>
+        <input id="nome" formControlName="nome" type="text" placeholder="Nome do produto" required />
+
+        <label for="descricao">Descrição:</label>
+        <input id="descricao" formControlName="descricao" type="text" placeholder="Descrição do produto" required />
+
+        <label for="quantidade">Quantidade:</label>
+        <input id="quantidade" formControlName="quantidade" type="number" min="1" required />
+
+        <label for="preco">Preço:</label>
+        <input id="preco" formControlName="preco" type="number" min="0" step="0.01" required />
+
+        <button type="submit" [disabled]="estoqueForm.invalid">Adicionar Produto</button>
+      </form>
+    </div>
+
+    <div class="produtos-lista">
+      <h3>Lista de Produtos</h3>
+      <div *ngIf="produtos.length === 0">
+        <p>Não há produtos no estoque.</p>
+      </div>
+      <div *ngFor="let produto of produtos">
+        <p>{{ produto.nome }} - {{ produto.descricao }}</p>
+        <p>Quantidade: {{ produto.quantidade }}</p>
+        <p>Preço: R$ {{ produto.preco | number: '1.2-2' }}</p>
+        <input type="number" [(ngModel)]="produto.quantidade" min="0" />
+        <button (click)="atualizarQuantidade(produto.id, produto.quantidade)">Atualizar Quantidade</button>
+      </div>
+    </div>
+  </main>
+</div>

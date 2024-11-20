@@ -1,0 +1,29 @@
+<div class="layout">
+  <aside class="sidebar">
+    <img src="../../../assets/WhatsApp_Image_2024-03-08_at_16.15.20-removebg-preview.png" alt="Logo" width="200px">
+    <nav>
+      <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/financas">Finanças</a></li>
+        <li><a routerLink="/estoque">Estoque</a></li>
+        <li><a routerLink="/clientes">Clientes</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <h2>Login</h2>
+
+    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+      <label for="email">E-mail:</label>
+      <input id="email" formControlName="email" type="email" placeholder="Digite seu e-mail" required />
+
+      <label for="senha">Senha:</label>
+      <input id="senha" formControlName="senha" type="password" placeholder="Digite sua senha" required />
+
+      <button type="submit" [disabled]="loginForm.invalid">Entrar</button>
+    </form>
+
+    <p *ngIf="loginError" class="error-message">{{ loginError }}</p>
+  </main>
+</div>

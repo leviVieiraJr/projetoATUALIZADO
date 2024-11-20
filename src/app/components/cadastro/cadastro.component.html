@@ -1,0 +1,41 @@
+<div class="layout">
+    <aside class="sidebar">
+      <img src="../../../assets/WhatsApp_Image_2024-03-08_at_16.15.20-removebg-preview.png" alt="Logo" width="200px">
+      <nav>
+        <ul>
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/financas">Finanças</a></li>
+          <li><a routerLink="/estoque">Estoque</a></li>
+          <li><a routerLink="/clientes">Clientes</a></li>
+        </ul>
+      </nav>
+    </aside>
+  
+    <main class="content">
+      <h2>Cadastrar Novo Usuário</h2>
+  
+      <form (ngSubmit)="onSubmit()" [formGroup]="cadastroForm">
+        <label for="nome">Nome:</label>
+        <input id="nome" formControlName="nome" type="text" placeholder="Nome" required />
+  
+        <label for="email">E-mail:</label>
+        <input id="email" formControlName="email" type="email" placeholder="E-mail" required />
+  
+        <label for="senha">Senha:</label>
+        <input id="senha" formControlName="senha" type="password" placeholder="Senha" required />
+  
+        <label for="telefone">Telefone:</label>
+        <input id="telefone" formControlName="telefone" type="text" placeholder="Telefone" required />
+  
+        <label for="endereco">Endereço:</label>
+        <input id="endereco" formControlName="endereco" type="text" placeholder="Endereço" required />
+  
+        <label for="cpf">CPF:</label>
+        <input id="cpf" formControlName="cpf" type="text" placeholder="CPF" required />
+  
+        <button type="submit" [disabled]="cadastroForm.invalid">Cadastrar</button>
+      </form>
+      <p *ngIf="cadastroError" class="error-message">{{ cadastroError }}</p>
+    </main>
+  </div>
+  

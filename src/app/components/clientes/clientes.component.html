@@ -1,0 +1,53 @@
+<div class="layout">
+  <aside class="sidebar">
+    <img src="../../../assets/WhatsApp_Image_2024-03-08_at_16.15.20-removebg-preview.png" alt="Logo" width="200px">
+    <nav>
+      <ul>
+        <li><a routerLink="/financas">Finanças</a></li>
+        <li><a routerLink="/estoque">Estoque</a></li>
+        <li><a routerLink="/clientes">Clientes</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <h2>Clientes</h2>
+
+    <div class="adicionar-cliente">
+      <h3>Cadastrar Novo Cliente</h3>
+      <form (ngSubmit)="onSubmit()" [formGroup]="clientesForm">
+        <label for="nome">Nome:</label>
+        <input id="nome" formControlName="nome" type="text" placeholder="Nome" required />
+
+        <label for="email">E-mail:</label>
+        <input id="email" formControlName="email" type="email" placeholder="E-mail" required />
+
+        <label for="telefone">Telefone:</label>
+        <input id="telefone" formControlName="telefone" type="text" placeholder="Telefone" required />
+
+        <label for="endereco">Endereço:</label>
+        <input id="endereco" formControlName="endereco" type="text" placeholder="Endereço" required />
+
+        <label for="cpf">CPF:</label>
+        <input id="cpf" formControlName="cpf" type="text" placeholder="CPF" required />
+
+        <button type="submit" [disabled]="clientesForm.invalid">Cadastrar Cliente</button>
+      </form>
+      <p *ngIf="clienteError" class="error-message">{{ clienteError }}</p>
+    </div>
+
+    <div class="clientes-lista">
+      <h3>Clientes Cadastrados</h3>
+      <div *ngIf="clientes.length === 0">
+        <p>Não há clientes cadastrados.</p>
+      </div>
+      <div *ngFor="let cliente of clientes">
+        <p>Nome: {{ cliente.nome }}</p>
+        <p>Email: {{ cliente.email }}</p>
+        <p>Telefone: {{ cliente.telefone }}</p>
+        <p>Endereço: {{ cliente.endereco }}</p>
+        <p>CPF: {{ cliente.cpf }}</p>
+      </div>
+    </div>
+  </main>
+</div>

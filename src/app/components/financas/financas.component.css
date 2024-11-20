@@ -1,0 +1,95 @@
+/* src/app/components/financas/financas.component.css */
+
+img {
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 10px;
+  width: 180px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Container principal para organizar as seções lado a lado */
+.financas-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1000px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+/* Estilo do formulário de registro de venda */
+.registro-venda {
+  width: 48%; /* Ajusta para ocupar metade da largura do container */
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #D32F2F;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+input, select, button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Botão de registrar venda */
+button {
+  background-color: #D32F2F;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #C62828;
+}
+
+/* Histórico de vendas */
+.historico-vendas {
+  width: 48%; /* Ajusta para ocupar metade da largura do container */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.historico-vendas h3 {
+  font-size: 1.5em;
+  color: #D32F2F;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.historico-vendas div {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-top: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
