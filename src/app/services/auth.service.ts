@@ -43,4 +43,9 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem('auth_token');
   }
+  estaAutenticado(): boolean {
+    const token = localStorage.getItem('authToken'); // Verifique como você armazena o token
+    return !!token;
+  }
+  
 }
