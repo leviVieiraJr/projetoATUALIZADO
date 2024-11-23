@@ -17,7 +17,7 @@ export class AuthService {
   }
 
   // Cadastro
-  register(user: { nome: string; email: string; senha: string }): Observable<any> {
+  register(user: { nome: string; email: string; senha: string, cpf: number, endereco: string, telefone:number}): Observable<any> {
     return this.http.post(`${this.apiUrl}/register`, user);
   }
 

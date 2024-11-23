@@ -3,9 +3,10 @@ const ItemVendaController = require('../controllers/ItemVendaController');
 
 const router = express.Router();
 
-router.get('/item-venda', ItemVendaController.listarItemVenda);
-router.post('/item-venda', ItemVendaController.createItemVenda);
-router.put('/item-venda/:id', ItemVendaController.updateItemVenda);
-router.delete('/item-venda/:id', ItemVendaController.delete);
+router.get('/financas', ItemVendaController.listarItemVenda);
+router.post('/financas-venda', ItemVendaController.createItemVenda);
+router.put('/financas/:id', ItemVendaController.updateItemVenda);
+router.delete('/financas/:id', ItemVendaController.delete);
 
 module.exports = router;
+r

@@ -77,3 +77,31 @@ input.invalid {
   margin-bottom: 10px;
   font-size: 14px;
 }
+.sidebar {
+  width: 220px;
+  background-color: #212529; 
+  padding: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+  background-color: #3D4145;
+  color: white;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+
+.sidebar nav ul li:hover {
+  background-color: #000000; 
+}

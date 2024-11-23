@@ -5,13 +5,16 @@ import { FinancasComponent } from './components/financas/financas.component';
 import { EstoqueComponent } from './components/estoque/estoque.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
 import { AuthGuard } from './auth.guard';  
+import { CadastroComponent } from './components/cadastro/cadastro.component';
 
 const routes: Routes = [
+  { path: 'cadastro', component: CadastroComponent},
   { path: 'login', component: LoginComponent },
   { path: 'financas', component: FinancasComponent, canActivate: [AuthGuard] },
   { path: 'estoque', component: EstoqueComponent, canActivate: [AuthGuard] },
   { path: 'clientes', component: ClientesComponent, canActivate: [AuthGuard] },
-  { path: '', redirectTo: '/login', pathMatch: 'full' }  // Redireciona para login se a rota estiver vazia
+  { path: '', redirectTo: '/cadastro', pathMatch: 'full' },
+  { path: '**', redirectTo: '/cadastro' }  // Redireciona para login se a rota estiver vazia
 ];
 
 @NgModule({
